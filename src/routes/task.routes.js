@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 
@@ -11,7 +10,7 @@ router.get('/', async (req, res) => {
   res.json(tasks);
 });
 
-// GET task by ID
+// GET Tasks by ID
 router.get('/:id', async (req, res) => {
   const task = await Task.findById(req.params.id);
   res.json(task);
